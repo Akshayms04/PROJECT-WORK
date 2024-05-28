@@ -4,7 +4,7 @@ pipeline {
         stage('git cloned'){
             steps{
                 git url: 'https://github.com/Akshayms04/PROJECT-WORK.git', branch: "master"
-              
+                sh "mvn clean package"  
             }
         }
         stage('Build docker image'){
